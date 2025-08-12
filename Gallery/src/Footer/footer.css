@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 250px;
+    background-color: #6211F5;
+    gap: 32px;
+    font-family: "Mozilla Headline", sans-serif;
+    color: #F5EA12;
+}
+
+#footer div{
+    display: flex;
+    gap: 128px;
+}
+
+#footer img {
+    height: 150px;
+}
+
+#footer li {
+    list-style: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+    a {
+        color: #F5EA12 !important;
+    }
+}
+
+#footer li a:hover {
+    color: #B5AF3A !important;
+}
+
+#footer span {
+    display: flex;
+    gap: 8px;
+}

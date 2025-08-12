@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');
+
+#navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 24px;
+    box-sizing: border-box;
+    backdrop-filter: blur(16px);
+}
+
+#navbar-left {
+    display: flex;
+    padding-left: 24px;
+    gap: 32px;
+}
+
+#navbar-left img {
+    height: 24px;
+}
+
+#navbar-right {
+    display: flex;
+    padding-left: 0;
+    padding-right: 24px;
+    gap: 32px;
+}
