@@ -1,0 +1,89 @@
+#login {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+#form-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    background-color: #6211F5;
+    padding: 48px;
+    margin-inline: 24px;
+    box-shadow: 8px 8px 2px #B5AF3A;
+    color: #F5E911;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form span {
+    font-size: 2rem;
+}
+
+#login-form button {
+    font-family: inherit;
+    margin-top: 48px;
+    background: none;
+    border: 0;
+    color: #F5E911 !important;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-size: 210% 100%;
+    background-image: linear-gradient(to right, #6211F5 50%, #F5E911 50%);
+    transition: all 200ms ease-in;
+    max-width: 80%;
+}
+
+#login-form button:hover {
+    color: #6211F5 !important;
+    background-position: 100% 0%;
+}
+
+#login-form a {
+    margin-top: 16px;
+    text-align: center;
+    color: #F5E911;
+    text-decoration: underline;
+    font-size: 0.85rem;
+}
+
+#form-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+#form-links a:hover {
+    color: #B5AF3A;
+}
+
+#form-check {
+    margin-top: 12px;
+}
+
+#form-check input[type="checkbox"] {
+    accent-color: #F5E911;
+}
+
+#login-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #F5E911;
+    padding-left: 48px;
+}
+
+#login-right img {
+    height: 250px;
+}
+
+#login-right p {
+    text-align: right;
+    font-size: 1.1rem;
+}
