@@ -1,5 +1,10 @@
+import "./gallery.css"
+import { GalleryHero } from "./GalleryHero/GalleryHero"
+
 export function Gallery() {
     return (
-        <div>Gallery</div>
+        <section id="gallery">
+            <GalleryHero/>
+        </section>
     )
 };
