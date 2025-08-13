@@ -41,10 +41,7 @@
     5% {
         transform: translateY(24px);
     }
-    10% {
-        transform: translateY(0px);
-    }
-    to {
+    10%, to {
         transform: translateY(0px);
     }
 }

@@ -26,6 +26,12 @@
     scale: 105%;
 }
 
+.nav-active {
+    color: #F5EA12 !important;
+    background-position: 100% 0%;
+    scale: 105%;
+}
+
 a {
     text-decoration: none;
 }

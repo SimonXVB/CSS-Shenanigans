@@ -2,13 +2,16 @@ import "./navbar.css"
 import logo from "../Assets/dummyLogo.png"
 import { Button } from "./Button/Button"
 import { NavLink } from "react-router"
+import { useState } from "react"
 
 export function Navbar() {
+    const [active, setActive] = useState("discover");
+
     return (
         <nav id="navbar">
             <span id="navbar-left">
                 <img src={logo} alt="Logo"/>
-                <NavLink to="/discover"><Button title={"DISCOVER"}/></NavLink>
+                <NavLink to="/discover"><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
             </span>
             <span id="navbar-right">
                  <NavLink to="/about">
@@ -19,6 +22,8 @@ export function Navbar() {
                             </svg>
                         }
                         title={"About"}
+                        active={active === "about"} 
+                        setActive={() => setActive("about")}
                     />
                 </NavLink>
                 <NavLink to="/profile">
@@ -29,6 +34,8 @@ export function Navbar() {
                             </svg>
                         }
                         title={"Profile"}
+                        active={active === "profile"} 
+                        setActive={() => setActive("profile")}
                     />
                 </NavLink>
                 <NavLink to="/login">
@@ -40,6 +47,8 @@ export function Navbar() {
                             </svg>
                         }
                         title={"Login"}
+                        active={active === "login"} 
+                        setActive={() => setActive("login")}
                     />
                 </NavLink>
             </span>
