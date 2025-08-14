@@ -1,26 +1,34 @@
 import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router";
 import { Loading } from "../../Loading/Loading";
 import "./galleryContent.css"
-import { Product } from "../Product/Product";
+import { Product } from "../../Product/Product";
 
 export function GalleryContent() {
+    const [searchParams, setSearchParams] = useSearchParams();
+
     const [content, setContent] = useState<[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const [currentPage, setCurrentPage] = useState<number>(1);
+    const [currentPage, setCurrentPage] = useState<number>(Number(searchParams.get("page")) || 1);
 
     const totalPages = useRef<number>(null);
     
     const LIMIT = 30;
 
-    async function getContent() {
+    async function getContent(page: number) {
         try {
             setLoading(true);
 
-            const res = await fetch(`https://dummyjson.com/products?skip=${(currentPage - 1) * LIMIT}&limit=${LIMIT}`);
+            const res = await fetch(`https://dummyjson.com/products?skip=${(page - 1) * LIMIT}&limit=${LIMIT}`);
             const content = await res.json();
             
             setContent(content.products);
             totalPages.current = Math.ceil(content.total / LIMIT);
+
+            if(Number(searchParams.get("page")) > totalPages.current! || Number(searchParams.get("page")) < 1) {
+                setCurrentPage(1);
+                setSearchParams({page: "1"});
+            };
 
             setLoading(false);
         } catch (error) {
@@ -31,13 +39,16 @@ export function GalleryContent() {
 
     function setPage(page: number) {
         setCurrentPage(page);
+        setSearchParams({page: String(page)});
         window.scrollTo(0, 0);
+
+        getContent(page);
     };
 
     useEffect(() => {
-        getContent();
+        getContent(currentPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentPage]);
+    }, []);
 
     return (
         <section id="gallery-content">
