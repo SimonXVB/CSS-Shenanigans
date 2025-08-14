@@ -1,0 +1,81 @@
+.product {
+    position: relative;
+    border: 8px solid #6211F5;
+    box-shadow: 8px 8px 4px #B5AF3A;
+    overflow: hidden;
+    opacity: 0;
+    animation: pop-in 100ms linear forwards;
+}
+
+.product img {
+    height: 325px;
+    aspect-ratio: 1/1;
+    transition: scale 200ms ease-in;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #F5E911;
+    background-color: rgb(62, 55, 75, 0.2);
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+.product-info p {
+    background-color: #6211F5;
+    margin: 0;
+    padding-left: 12px;
+    padding-block: 8px;
+}
+
+.product:hover .product-info {
+    opacity: 1;
+}
+
+.product:hover img {
+    scale: 125%;
+}
+
+.loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: 10;
+    background: linear-gradient(-45deg, #DDDDDD, #F5E911, #DDDDDD, #F5E911);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        scale: 75%;
+    }
+    75% {
+        scale: 110%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

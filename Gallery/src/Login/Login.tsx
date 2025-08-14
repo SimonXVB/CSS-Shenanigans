@@ -19,7 +19,7 @@ export function Login() {
                     </div>
                     <button type="submit">Login</button>
                     <div id="form-links">
-                        <a href="https://www.youtube.com/watch?v=9yjZpBq1XBE" target="_blank">Forgot credentials</a>
+                        <a href="https://www.youtube.com/watch?v=9yjZpBq1XBE" target="_blank">Forgot password</a>
                         <a href="https://www.youtube.com/watch?v=bah3ZIJS8Yo" target="_blank">Don't have an account?</a>
                     </div>
                 </form>
