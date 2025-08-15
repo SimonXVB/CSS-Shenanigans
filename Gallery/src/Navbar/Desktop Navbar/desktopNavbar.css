@@ -28,3 +28,9 @@
     padding-right: 24px;
     gap: 32px;
 }
+
+@media (max-width: 799px) {
+    #navbar {
+        display: none;
+    }
+}

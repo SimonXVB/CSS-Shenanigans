@@ -30,7 +30,7 @@ export function Card() {
     return (
         <div id="card-wrapper">
             <div id="card">
-                <img src={!loading ? dummy!["image"] : undefined} alt="" />
+                <img src={!loading ? dummy!["image"] : undefined}/>
                 {!loading &&
                     <>
                         <div id="profile-top">

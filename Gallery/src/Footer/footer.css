@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 250px;
+    min-height: 250px;
     background-color: #6211F5;
     gap: 32px;
     font-family: "Mozilla Headline", sans-serif;
@@ -12,13 +12,17 @@
     margin-top: 128px;
 }
 
-#footer div{
+#footer div {
     display: flex;
     gap: 128px;
 }
 
 #footer img {
     height: 150px;
+}
+
+#footer ul {
+    padding: 0;
 }
 
 #footer li {
@@ -38,4 +42,17 @@
 #footer span {
     display: flex;
     gap: 8px;
+}
+
+@media (max-width: 600px) {
+    #footer {
+        padding-block: 24px;
+    }
+
+    #footer div {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
 }

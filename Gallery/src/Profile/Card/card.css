@@ -65,3 +65,27 @@
     font-size: 1.1rem;
     color: white;
 }
+
+@media (max-width: 500px) {
+    #card {
+        padding-inline: 32px;
+    }
+
+    #card img {
+        top: -25%;
+        height: 125px;
+        width: 125px;
+    }
+
+    #profile-name {
+        font-size: 1.5rem;
+    }
+
+    #profile-location {
+        font-size: 1.1rem;
+    }
+
+    #profile-bottom span {
+        font-size: 0.9rem;
+    }
+}

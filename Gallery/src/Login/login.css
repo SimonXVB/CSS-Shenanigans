@@ -45,18 +45,18 @@
     background-position: 100% 0%;
 }
 
-#login-form a {
-    margin-top: 16px;
+#form-links {
+    display: flex;
+    gap: 12px;
+}
+
+#form-links a {
+    display: flex;
+    margin-top: 12px;
     text-align: center;
     color: #F5E911;
     text-decoration: underline;
     font-size: 0.85rem;
-}
-
-#form-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 12px;
 }
 
 #form-links a:hover {
@@ -86,4 +86,48 @@
 #login-right p {
     text-align: right;
     font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+    #form-wrapper {
+        margin-top: 64px;
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    #login-form span {
+        display: none;
+    }
+
+    #login-right {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    #login-right img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    #form-wrapper {
+        box-shadow: none;
+        margin-inline: 0;
+        width: 100%;
+    }
+
+    #login-right {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    #login-right img {
+        height: 150px;
+    }
+
+    #form-links {
+        margin-top: 24px;
+        flex-direction: column;
+        gap: 0px;
+    }
 }

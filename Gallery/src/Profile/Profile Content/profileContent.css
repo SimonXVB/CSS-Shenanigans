@@ -22,3 +22,11 @@
     justify-content: center;
     gap: 24px;
 }
+
+@media (max-width: 500px) {
+    #profile-content-name {
+        font-size: 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+}
