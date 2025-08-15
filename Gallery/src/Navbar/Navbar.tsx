@@ -3,15 +3,19 @@ import logo from "../Assets/dummyLogo.png"
 import { Button } from "./Button/Button"
 import { NavLink } from "react-router"
 import { useState } from "react"
+import { useLocation } from "react-router"
 
 export function Navbar() {
-    const [active, setActive] = useState("discover");
+    const location = useLocation();
+    const [active, setActive] = useState(location.pathname.split("/")[1] || "discover");
+
+    console.log(location);
 
     return (
         <nav id="navbar">
             <span id="navbar-left">
                 <img src={logo} alt="Logo"/>
-                <NavLink to="/discover"><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
+                <NavLink to={`/discover${location.search}`}><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
             </span>
             <span id="navbar-right">
                  <NavLink to="/about">

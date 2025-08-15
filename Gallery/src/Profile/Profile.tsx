@@ -1,7 +1,12 @@
+import "./profile.css"
+import { Card } from "./Card/Card"
+import { ProfileContent } from "./Profile Content/ProfileContent"
+
 export function Profile() {
     return (
-        <section>
-            
+        <section id="profile">
+            <Card/>
+            <ProfileContent/>
         </section>
     )
 };
