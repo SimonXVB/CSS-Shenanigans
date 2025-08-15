@@ -9,8 +9,6 @@ export function Navbar() {
     const location = useLocation();
     const [active, setActive] = useState(location.pathname.split("/")[1] || "discover");
 
-    console.log(location);
-
     return (
         <nav id="navbar">
             <span id="navbar-left">

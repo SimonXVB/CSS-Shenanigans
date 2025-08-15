@@ -10,7 +10,6 @@ export function Product({ product, i }: { product: never, i: number }) {
             <img onLoad={() => setImageLoading(false)} src={product["thumbnail"]} loading="lazy"/>
             <div className="product-info">
                 <p>{product["title"]}</p>
-                <p>{product["rating"]} Rating</p>
             </div>
         </div>
     )
