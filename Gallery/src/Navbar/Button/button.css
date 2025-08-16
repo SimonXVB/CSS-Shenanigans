@@ -35,3 +35,14 @@
 a {
     text-decoration: none;
 }
+
+@media (width < 799px) {
+    .navbar-button {
+        font-size: 1.5rem;
+        background-color: #F5EA12;
+        color: #6211F5;
+        padding-block: 8px;
+        width: 100%;
+        box-shadow: 4px 0px 12px 2px #646464;
+    }
+}

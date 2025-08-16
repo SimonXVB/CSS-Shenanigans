@@ -111,23 +111,38 @@
 
 @media (max-width: 450px) {
     #form-wrapper {
+        background-color: transparent;
         box-shadow: none;
         margin-inline: 0;
-        width: 100%;
+        padding-inline: 24px;
+    }
+
+    #login-form {
+        align-items: center;
+        background-color: #6211F5;
+        padding: 16px;
     }
 
     #login-right {
         border-left: 0;
         padding-left: 0;
+        background-color: #6211F5;
+        padding: 24px;
+        padding-inline: 32px;
     }
 
     #login-right img {
         height: 150px;
     }
 
+    #login-right p {
+        margin-bottom: 0;
+    }
+
     #form-links {
         margin-top: 24px;
         flex-direction: column;
+        align-items: center;
         gap: 0px;
     }
 }
