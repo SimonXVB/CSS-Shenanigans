@@ -1,9 +1,14 @@
-
+import { BrowserRouter, Routes, Route } from "react-router"
+import { Home } from "./Home/Home"
 
 function App() {
 
   return (
-    <div>Business</div>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
