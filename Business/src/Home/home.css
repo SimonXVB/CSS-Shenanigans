@@ -222,7 +222,6 @@
 /*--- Hero End ---*/
 
 /*--- About Start ---*/
-
 #home-about {
     display: flex;
     flex-direction: column;
@@ -260,8 +259,7 @@
     justify-content: center;
     align-items: center;
     gap: 32px;
-    background-color: #ff5e5e;
-    border-radius: 12px;
+    background: radial-gradient(circle at top left, #ff7a7a 5%, #ff5e5e);
     padding-inline: 24px;
     padding-block: 12px;
     box-shadow: -8px -8px #fff;
@@ -273,7 +271,7 @@
 }
 
 .home-desc-entry:nth-child(3) {
-    background-color: #fff;
+    background: radial-gradient(circle at top left, rgb(241, 241, 241), #fff);
     color: #ff5e5e;
     box-shadow: -8px -8px #ff5e5e;
     margin-left: 48px;
@@ -312,7 +310,7 @@
     }
 
     img:hover:not(.image-active) {
-        outline: 2px solid #fff;
+        outline: 1px solid #fff;
     }
 }
 
@@ -365,16 +363,28 @@
 
 @media (max-width: 800px) {
     #home-about {
-        align-items: center;
-        margin-inline: 24px;
+        margin-inline: 0;
+        width: 100%;
+
+        h1 {
+            margin-inline: 16px;
+        }
+    }
+
+    #home-about-desc {
+        h2 {
+            margin-inline: 16px;
+        }
     }
 
     .home-desc-entry {
         flex-direction: column;
         margin: 0;
+        gap: 0;
+        align-items: start;
 
         svg {
-            width: 125px;
+            width: 100px;
         }
     }
 
@@ -402,6 +412,171 @@
     #home-about-desc {
         h2 {
             font-size: 1.5rem;
+        }
+    }
+}
+/*--- About End ---*/
+
+/*--- Reviews Start ---*/
+#home-reviews {
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    margin-inline: 48px;
+}
+
+#home-reviews-h1 {
+    display: flex;
+    justify-content: end;
+
+    h1 {
+        font-weight: 800;
+        border-bottom: 4px solid #ff5e5e;
+        width: fit-content;
+        font-size: 2.5rem;
+    }
+}
+
+#home-reviews-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-block: 32px;
+    gap: 32px;
+}
+
+.review-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 325px;
+    height: fit-content;
+    padding-inline: 16px;
+    padding-block: 32px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at top left, #ff7676 40%, #ff7878);
+    box-shadow: 6px -6px #fff;
+    transition: scale 250ms;
+}
+
+.review-card:hover {
+    scale: 110%;
+}
+
+.card-desc {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 900;
+        margin-top: 12px;
+    }
+
+    img {
+        height: 150px;
+        border-radius: 999px;
+        box-shadow: 4px 4px #fff;
+    }
+}
+
+@media (max-width: 900px) {
+    #home-reviews-h1 {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    #home-reviews {
+        font-family: Roboto, sans-serif;
+        color: #fff;
+    }
+}
+
+@media (max-width: 500px) {
+    #home-reviews {
+        margin-inline: 0;
+    }
+
+    #home-reviews-h1 {
+        h1 {
+            font-size: 1.7rem;
+            margin-inline: 16px;
+        }
+    }
+
+    .review-card {
+        width: 100%;
+    }
+}
+/*--- Reviews End ---*/
+
+#home-call-to-action {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    margin-block: 128px;
+
+    p {
+        font-weight: 900;
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    button {
+        border: 0;
+        font-family: Roboto, sans-serif;
+        font-size: 1.5rem;
+        padding: 24px;
+        border-radius: 4px;
+        background-color: transparent;
+        color: #ff5e5e;
+        background-color: #fff;
+        margin-top: 32px;
+        cursor: pointer;
+        font-weight: 700;
+        transition: all 150ms;
+    }
+
+    button:hover {
+        background-color: #ff5e5e;
+        color: #fff;
+    }
+}
+
+@media (max-width: 600px) {
+    #home-call-to-action {
+        p {
+            font-size: 2rem;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 16px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #home-call-to-action {
+        p {
+            font-size: 1.8rem;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 12px;
         }
     }
 }
