@@ -5,9 +5,9 @@
     font-family: Roboto, sans-serif;
     color: #fff;
     margin-inline: 48px;
-    margin-block: 32px;
+    margin-block: 64px;
 
-    h1 {
+    > h1 {
         width: fit-content;
         font-size: 2.5rem;
         font-weight: 800;
@@ -15,24 +15,64 @@
     }
 }
 
+#home-about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+#home-about-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-about-main-image-wrapper {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 700px;
+    margin-bottom: 16px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+#home-about-images-select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-inline: 8px;
+
+    img {
+        height: 75px;
+        cursor: pointer;
+    }
+
+    img:hover:not(.image-active) {
+        outline: 1px solid #fff;
+    }
+}
+
+.image-active {
+    outline: 3px solid #ff5e5e;
+    box-shadow: 2px 2px 5px 5px #ff5e5e80;
+}
+
 #home-about-desc {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-inline: auto;
     max-width: 900px;
-
-    h2 {
-        font-size: 2rem;
-        border-top: 4px solid #ff5e5e;
-        width: fit-content;
-        font-weight: 800;
-    }
 }
 
-.home-desc-entry {
+.home-about-desc-entry {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 32px;
     background: radial-gradient(circle at top left, #ff7a7a 5%, #ff5e5e);
@@ -42,11 +82,12 @@
     margin-right: 48px;
     
     svg {
-        width: 500px;
+        max-width: 70px;
+        width: 100%;
     }
 }
 
-.home-desc-entry:nth-child(3) {
+.home-about-desc-entry:nth-child(2) {
     background: radial-gradient(circle at top left, rgb(241, 241, 241), #fff);
     color: #ff5e5e;
     box-shadow: -8px -8px #ff5e5e;
@@ -54,72 +95,9 @@
     margin-right: 0px;
 }
 
-#home-about-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    gap: 12px;
-    margin-block: 12px;
-
-    > img {
-        max-width: 900px;
-    }
-}
-
-.image-active {
-    outline: 3px solid #ff5e5e;
-    box-shadow: 2px 2px 5px 5px #ff5e5e80;
-}
-
-#home-about-images-select {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-
-    img {
-        height: 175px;
-        width: auto;
-        cursor: pointer;
-    }
-
-    img:hover:not(.image-active) {
-        outline: 1px solid #fff;
-    }
-}
-
 @media (max-width: 1650px) {
-    #home-about-images {
-        > img {
-            width: 800px;
-        }
-    }
-
-    #home-about-images-select {
-        gap: 4px;
-
-        img {
-            height: 125px
-        }
-    }
-}
-
-@media (max-width: 1350px) {
-    #home-about-images {
+    #home-about-content {
         flex-direction: column;
-        height: auto;
-
-        >img {
-            width: 100%;
-        }
-    }
-
-    #home-about-images-select {
-        img {
-            height: 70px
-        }
     }
 }
 
@@ -127,12 +105,6 @@
     #home-about {
         h1 {
             font-size: 2rem;
-        }
-    }
-
-    #home-about-images-select {
-        img {
-            height: 70px
         }
     }
 }
@@ -147,24 +119,29 @@
         }
     }
 
+    #home-about-main-image-wrapper {
+        max-width: none;
+        width: 100%;
+    }
+
     #home-about-desc {
+        gap: 0;
+
         h2 {
             margin-inline: 16px;
         }
     }
 
-    .home-desc-entry {
+    .home-about-desc-entry {
         flex-direction: column;
         margin: 0;
         gap: 0;
         align-items: start;
-
-        svg {
-            width: 100px;
-        }
+        padding-block: 24px;
+        box-shadow: none;
     }
 
-    .home-desc-entry:nth-child(3) {
+    .home-about-desc-entry:nth-child(2) {
         flex-direction: column-reverse;
         margin: 0;
     }
@@ -178,7 +155,17 @@
     }
 }
 
+@media (max-width: 600px) {
+    #home-about-main-image-wrapper {
+        height: 410px;
+    }
+}
+
 @media (max-width: 500px) {
+    #home-about-main-image-wrapper {
+        height: 350px;
+    }
+
     #home-about {
         h1 {
             font-size: 1.7rem;

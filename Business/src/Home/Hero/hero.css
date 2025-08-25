@@ -7,7 +7,7 @@
     gap: 80px;
 }
 
-#home-text {
+#home-hero-text {
     font-family: Roboto, sans-serif;
 
     h1 {
@@ -62,7 +62,7 @@
     from {opacity: 0;}
 }
 
-#home-img {
+#home-hero-img {
     position: relative;
     animation: fade-in 500ms ease-in forwards;
 
@@ -73,7 +73,7 @@
     }
 }
 
-#img-slider {
+#home-hero-carousel-wrapper {
     position: absolute;
     top: 12.5%;
     left: 15%;
@@ -82,7 +82,7 @@
     perspective: 1000px;
 }
 
-#carousel {
+#home-hero-carousel {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -151,7 +151,7 @@
         gap: 18px;
     }
 
-    #home-text {
+    #home-hero-text {
         h1 {
             font-size: 3rem;
         }
@@ -165,11 +165,11 @@
         }
     }
 
-    #home-img img {
+    #home-hero-img img {
         height: 450px;
     }
 
-    #img-slider {
+    #home-hero-carousel-wrapper{
         width: 100px;
         height: 100px;
     }
@@ -182,7 +182,7 @@
         gap: 18px;
     }
 
-    #home-text {
+    #home-hero-text {
         h1 {
             font-size: 2.2rem;
         }
@@ -196,16 +196,16 @@
         }
     }
 
-    #home-img img {
+    #home-hero-img img {
         height: 300px;
     }
 
-    #img-slider {
+    #home-hero-carousel-wrapper {
         width: 70px;
         height: 70px;
     }
 
-    #carousel {
+    #home-hero-carousel {
         animation: carousel-500px 16s ease-in-out infinite;
 
         svg:nth-child(1) {transform: rotateY(0deg) translateZ(40px);}

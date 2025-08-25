@@ -28,9 +28,10 @@
 .review-card {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     width: 325px;
-    height: fit-content;
+    height: 550px;
     padding-inline: 16px;
     padding-block: 32px;
     box-sizing: border-box;
@@ -96,5 +97,6 @@
 
     .review-card {
         width: 100%;
+        height: fit-content;
     }
 }
