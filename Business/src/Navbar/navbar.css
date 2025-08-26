@@ -1,0 +1,41 @@
+#navbar-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 24px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at left, rgba(29, 29, 29, 0.75) 90%, rgba(61, 0, 0, 0.75));
+    box-shadow: 4px 4px 8px 4px rgba(43, 43, 43, 0.75);
+    backdrop-filter: blur(12px);
+    width: 80vw;
+    margin-inline: auto;
+    padding: 27px;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+}
+
+#nav-left, #nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    span {
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
