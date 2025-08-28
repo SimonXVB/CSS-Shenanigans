@@ -32,7 +32,7 @@ export function Navbar() {
                     <span><NavLink to={"/plans"} className={current === "plans" ? "nav-current" : ""} onClick={() => click("plans")}>Plans</NavLink></span>
                     <span><NavLink to={"/contact"} className={current === "contact" ? "nav-current" : ""} onClick={() => click("contact")}>Contact</NavLink></span>
                     <span><NavLink to={"/about"} className={current === "about" ? "nav-current" : ""} onClick={() => click("about")}>About</NavLink></span>
-                    <span><a href="https://github.com/SimonXVB" target="_blank">Github</a></span>
+                    <span><a href="https://github.com/SimonXVB" target="_blank">GitHub</a></span>
                 </div>
             </div>
         </nav>
