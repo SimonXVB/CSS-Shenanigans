@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./about.css"
 
 export function About() {
-    const [curretnImg, setCurrentImg] = useState<number>(1);
+    const [currentImg, setCurrentImg] = useState<number>(1);
     const imageIntervalRef = useRef<number>(undefined);
     const imageRef = useRef<HTMLImageElement>(null);
 
@@ -29,18 +29,22 @@ export function About() {
 
     return (
         <div id="home-about">
-            <h1>We are [insert company]</h1>
+            <h1>We are [company]</h1>
             <div id="home-about-content">
                 <div id="home-about-images">
                     <div id="home-about-main-image-wrapper">
-                        <img ref={imageRef} src={`/src/Assets/biz${curretnImg}.jpg`} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={`/src/Assets/biz1.jpg`} style={{opacity: currentImg === 1 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={`/src/Assets/biz2.jpg`} style={{opacity: currentImg === 2 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={`/src/Assets/biz3.jpg`} style={{opacity: currentImg === 3 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={`/src/Assets/biz4.jpg`} style={{opacity: currentImg === 4 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={`/src/Assets/biz5.jpg`} style={{opacity: currentImg === 5 ? "1" : "0"}} alt="Home About Main Image"/>
                     </div>
                     <div id="home-about-images-select">
-                        <img onClick={() => changeSrc(1)} src={"/src/Assets/biz1.jpg"} className={curretnImg === 1 ? "image-active" : ""} alt="Stock 1"/>
-                        <img onClick={() => changeSrc(2)} src={"/src/Assets/biz2.jpg"} className={curretnImg === 2 ? "image-active" : ""} alt="Stock 2"/>
-                        <img onClick={() => changeSrc(3)} src={"/src/Assets/biz3.jpg"} className={curretnImg === 3 ? "image-active" : ""} alt="Stock 3"/>
-                        <img onClick={() => changeSrc(4)} src={"/src/Assets/biz4.jpg"} className={curretnImg === 4 ? "image-active" : ""} alt="Stock 4"/>
-                        <img onClick={() => changeSrc(5)} src={"/src/Assets/biz5.jpg"} className={curretnImg === 5 ? "image-active" : ""} alt="Stock 5"/>
+                        <img onClick={() => changeSrc(1)} src={"/src/Assets/biz1.jpg"} className={currentImg === 1 ? "image-active" : ""} alt="Stock 1"/>
+                        <img onClick={() => changeSrc(2)} src={"/src/Assets/biz2.jpg"} className={currentImg === 2 ? "image-active" : ""} alt="Stock 2"/>
+                        <img onClick={() => changeSrc(3)} src={"/src/Assets/biz3.jpg"} className={currentImg === 3 ? "image-active" : ""} alt="Stock 3"/>
+                        <img onClick={() => changeSrc(4)} src={"/src/Assets/biz4.jpg"} className={currentImg === 4 ? "image-active" : ""} alt="Stock 4"/>
+                        <img onClick={() => changeSrc(5)} src={"/src/Assets/biz5.jpg"} className={currentImg === 5 ? "image-active" : ""} alt="Stock 5"/>
                     </div>
                 </div>
                 <div id="home-about-desc">

@@ -30,14 +30,20 @@
 }
 
 #home-about-main-image-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
-    height: 500px;
+    height: auto;
     width: 700px;
     margin-bottom: 16px;
 
     img {
+        position: absolute;
         max-width: 100%;
+    }
+
+    img:nth-child(1) {
+        position: static;
     }
 }
 
@@ -155,17 +161,7 @@
     }
 }
 
-@media (max-width: 600px) {
-    #home-about-main-image-wrapper {
-        height: 410px;
-    }
-}
-
 @media (max-width: 500px) {
-    #home-about-main-image-wrapper {
-        height: 350px;
-    }
-
     #home-about {
         h1 {
             font-size: 1.7rem;

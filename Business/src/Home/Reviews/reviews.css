@@ -17,31 +17,67 @@
 }
 
 #home-reviews-container {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     margin-block: 32px;
-    gap: 32px;
+    width: 1830px;
+    height: 600px;
+    perspective: 900px;
 }
 
 .review-card {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 325px;
+    width: 350px;
     height: 550px;
     padding-inline: 16px;
     padding-block: 32px;
-    box-sizing: border-box;
     background: radial-gradient(circle at top left, #ff7676 40%, #ff7878);
-    box-shadow: 6px -6px #fff;
-    transition: scale 250ms;
+    box-shadow: 6px -6px #fff, 0px 24px 24px -4px #414141;
+    margin-inline: 8px;
+    box-sizing: border-box;
 }
 
-.review-card:hover {
-    scale: 110%;
+.review-card:nth-child(1) {
+    z-index: 10;
+    left: 25%;
+    transform: translateX(-50%);
+    scale: 80%;
+}
+
+.review-card:nth-child(2) {
+    z-index: 20;
+    left: 35%;
+    transform: translateX(-50%);
+    scale: 90%;
+}
+
+.review-card:nth-child(3) {
+    z-index: 30;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.review-card:nth-child(4) {
+    z-index: 20;
+    left: 65%;
+    transform: translateX(-50%);
+    scale: 90%;
+}
+
+.review-card:nth-child(5) {
+    z-index: 10;
+    left: 75%;
+    transform: translateX(-50%);
+    scale: 80%;
+}
+
+.review-card:nth-child(6) {
+    opacity: 0;
 }
 
 .card-desc {
@@ -65,8 +101,113 @@
 
     img {
         height: 150px;
-        border-radius: 999px;
-        box-shadow: 4px 4px #fff;
+        border-radius: 32px;
+    }
+}
+
+@keyframes from-out-to-5 {
+    from {
+        left: 85%;
+        z-index: 5;
+        scale: 70%;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        left: 75%;
+        z-index: 10;
+        scale: 80%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes from-5-to-4 {
+    from {
+        left: 75%;
+        z-index: 10;
+        scale: 80%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    to {
+        z-index: 20;
+        left: 65%;
+        transform: translateX(-50%);
+        scale: 90%;
+        opacity: 1;
+    }
+}
+
+@keyframes from-4-to-3 {
+    from {
+        z-index: 20;
+        left: 65%;
+        transform: translateX(-50%);
+        scale: 90%;
+        opacity: 1;
+    }
+    to {
+        z-index: 30;
+        left: 50%;
+        transform: translateX(-50%);
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes from-3-to-2 {
+    from {
+        z-index: 30;
+        left: 50%;
+        transform: translateX(-50%);
+        scale: 100%;
+        opacity: 1;
+    }
+    50% {
+        transform-origin: center right;
+        transform: translateX(-90%) rotateY(12deg);
+    }
+    to {
+        z-index: 20;
+        left: 35%;
+        transform: translateX(-50%);
+        scale: 90%;
+        opacity: 1;
+    }
+}
+
+@keyframes from-2-to-1 {
+    from {
+        z-index: 20;
+        left: 35%;
+        transform: translateX(-50%);
+        scale: 90%;
+        opacity: 1;
+    }
+    to {
+        z-index: 10;
+        left: 25%;
+        transform: translateX(-50%);
+        scale: 80%;
+        opacity: 1;
+    }
+}
+
+@keyframes from-1-to-out {
+    from {
+        z-index: 10;
+        left: 25%;
+        transform: translateX(-50%);
+        scale: 80%;
+        opacity: 1;
+    }
+    to {
+        z-index: 5;
+        left: 15%;
+        transform: translateX(-50%);
+        scale: 70%;
+        opacity: 0;
     }
 }
 

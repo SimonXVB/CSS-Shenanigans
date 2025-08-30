@@ -1,7 +1,8 @@
+import { useEffect, useRef } from "react";
 import "./reviews.css"
 
 export function Reviews() {
-    const cardContent = [
+    const cards = [
         {
             img: "/src/Assets/review1.jpg",
             name: "John Business Name",
@@ -26,8 +27,33 @@ export function Reviews() {
             img: "/src/Assets/review5.jpg",
             name: "Business Couple Ltd.",
             desc: "Vestibulum at nisi a lectus luctus efficitur non eu nisl. Vivamus sit amet scelerisque velit. Ut id sollicitudin nunc. Quisque vestibulum malesuada faucibus. Proin sed facilisis lacus. Fusce venenatis eros nec pretium commodo."
+        },
+        {
+            img: "/src/Assets/review6.jpg",
+            name: "Business Lady",
+            desc: "Ut id sollicitudin nunc. Quisque vestibulum malesuada faucibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, autem quo. Dignissimos est obcaecati distinctio perspiciatis culpa laborum mollitia totam doloribus deleniti omnis repellat esse, officiis, iste fugiat! Aut, asperiores."
         }
     ];
+
+    const intervalRef = useRef<number>(undefined);
+    const cardsRef = useRef<HTMLDivElement[]>([]);
+    const animationsRef = useRef<string[]>(["from-2-to-1", "from-3-to-2", "from-4-to-3", "from-5-to-4", "from-out-to-5", "from-1-to-out"]);
+
+    function shiftCards() {
+        animationsRef.current.unshift(animationsRef.current.pop()!);
+
+        cardsRef.current.forEach((card, i) => {
+            card.style.animation = `${animationsRef.current[i]} 1s ease-in-out forwards`;
+        });
+    };
+
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            shiftCards();
+        }, 8000);
+
+        return () => clearInterval(intervalRef.current);
+    }, []);
 
     return (
         <div id="home-reviews">
@@ -35,8 +61,8 @@ export function Reviews() {
                 <h1>Testimonials</h1>
             </div>
             <div id="home-reviews-container">
-                {cardContent.map((card, i) => (
-                    <div key={i} className="review-card">
+                {cards.map((card, i) => (
+                    <div key={i} className="review-card" ref={ref => {cardsRef.current[i] = ref!}}>
                         <div className="card-desc">
                             {card.desc}
                         </div>
