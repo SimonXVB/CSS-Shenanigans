@@ -29,9 +29,9 @@ export function Navbar() {
                 </button>
                 <div id="navbar-content">
                     <span><NavLink to={"/"} className={current === "home" ? "nav-current" : ""} onClick={() => click("home")}>Home</NavLink></span>
-                    <span><NavLink to={"/plans"} className={current === "plans" ? "nav-current" : ""} onClick={() => click("plans")}>Plans</NavLink></span>
-                    <span><NavLink to={"/contact"} className={current === "contact" ? "nav-current" : ""} onClick={() => click("contact")}>Contact</NavLink></span>
-                    <span><NavLink to={"/about"} className={current === "about" ? "nav-current" : ""} onClick={() => click("about")}>About</NavLink></span>
+                    <span><NavLink to={"/"} className={current === "plans" ? "nav-current" : "inactive"}>Plans</NavLink></span>
+                    <span><NavLink to={"/"} className={current === "contact" ? "nav-current" : "inactive"}>Contact</NavLink></span>
+                    <span><NavLink to={"/"} className={current === "about" ? "nav-current" : "inactive"}>About</NavLink></span>
                     <span><a href="https://github.com/SimonXVB" target="_blank">GitHub</a></span>
                 </div>
             </div>

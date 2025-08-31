@@ -7,8 +7,8 @@ export function Footer() {
             <div id="footer-content-wrapper">
                 <div className="footer-content">
                     <span>Links:</span>
-                    <span><NavLink to={"/about"}>About</NavLink></span>
-                    <span><NavLink to={"/plans"}>Plans</NavLink></span>
+                    <span><NavLink to={"/"}>About</NavLink></span>
+                    <span><NavLink to={"/"}>Plans</NavLink></span>
                     <span><a href="https://github.com/SimonXVB" target="_blank">GitHub</a></span>
                 </div>
                 <div className="footer-content">

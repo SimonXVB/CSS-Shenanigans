@@ -1,16 +1,19 @@
 #home-reviews {
     font-family: Roboto, sans-serif;
     color: #fff;
-    margin-inline: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 #home-reviews-h1 {
     display: flex;
     justify-content: end;
     width: 100%;
+    padding-right: 48px;
+    box-sizing: border-box;
 
     h1 {
         font-weight: 800;
@@ -24,8 +27,8 @@
     position: relative;
     margin-block: 32px;
     height: 600px;
+    width: 1500px;
     perspective: 900px;
-    width: 100%;
 }
 
 .review-card {
@@ -40,7 +43,6 @@
     padding-block: 32px;
     background: radial-gradient(circle at top left, #ff7676 40%, #ff7878);
     box-shadow: 6px -6px #fff, 0px 24px 24px -4px #414141;
-    margin-inline: 8px;
     box-sizing: border-box;
 }
 
@@ -242,33 +244,32 @@
     100% {transform: translateX(0%)}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
     #home-reviews-h1 {
+        padding-right: 16px;
+
         h1 {
             font-size: 2rem;
         }
     }
-
-    #home-reviews {
-        font-family: Roboto, sans-serif;
-        color: #fff;
-    }
 }
 
 @media (max-width: 500px) {
-    #home-reviews {
-        margin-inline: 0;
+    #home-reviews-container {
+        scale: 80%;
+        height: 500px;
     }
-
+    
     #home-reviews-h1 {
         h1 {
             font-size: 1.7rem;
-            margin-inline: 16px;
         }
     }
+}
 
-    .review-card {
-        width: 100%;
-        height: fit-content;
+@media (max-width: 400px) {
+    #home-reviews-container {
+        scale: 75%;
+        height: 475px;
     }
 }
