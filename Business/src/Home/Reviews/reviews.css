@@ -2,11 +2,15 @@
     font-family: Roboto, sans-serif;
     color: #fff;
     margin-inline: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #home-reviews-h1 {
     display: flex;
     justify-content: end;
+    width: 100%;
 
     h1 {
         font-weight: 800;
@@ -18,12 +22,10 @@
 
 #home-reviews-container {
     position: relative;
-    display: flex;
-    align-items: center;
     margin-block: 32px;
-    width: 1830px;
     height: 600px;
     perspective: 900px;
+    width: 100%;
 }
 
 .review-card {
@@ -209,6 +211,35 @@
         scale: 70%;
         opacity: 0;
     }
+}
+
+#reviews-next-button {
+    width: 150px;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    background-color: #ff5e5e;
+    color: #fff;
+    cursor: pointer;
+
+    svg {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+#reviews-next-button:hover {
+    background-color: #fff;
+    color: #ff5e5e;
+}
+
+.reviews-button-anim {
+    animation: move-arrow 500ms ease-in-out;
+}
+
+@keyframes move-arrow {
+    50% {transform: translateX(50%)}
+    100% {transform: translateX(0%)}
 }
 
 @media (max-width: 900px) {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import "./reviews.css"
 
 export function Reviews() {
@@ -35,25 +35,29 @@ export function Reviews() {
         }
     ];
 
-    const intervalRef = useRef<number>(undefined);
+    const isAnimatingRef = useRef<boolean>(false);
     const cardsRef = useRef<HTMLDivElement[]>([]);
     const animationsRef = useRef<string[]>(["from-2-to-1", "from-3-to-2", "from-4-to-3", "from-5-to-4", "from-out-to-5", "from-1-to-out"]);
 
     function shiftCards() {
-        animationsRef.current.unshift(animationsRef.current.pop()!);
+        if(!isAnimatingRef.current) {
+            isAnimatingRef.current = true;
+            animationsRef.current.unshift(animationsRef.current.pop()!);
 
-        cardsRef.current.forEach((card, i) => {
-            card.style.animation = `${animationsRef.current[i]} 1s ease-in-out forwards`;
-        });
+            cardsRef.current.forEach((card, i) => {
+                card.style.animation = `${animationsRef.current[i]} 1s ease-in-out forwards`;
+            });
+
+            cardsRef.current[0].onanimationend = () => isAnimatingRef.current = false;
+        };
     };
 
-    useEffect(() => {
-        intervalRef.current = setInterval(() => {
-            shiftCards();
-        }, 8000);
-
-        return () => clearInterval(intervalRef.current);
-    }, []);
+    function buttonAnim() {
+        const svg = document.querySelector("#reviews-next-button svg") as HTMLElement;
+        
+        svg.classList.add("reviews-button-anim");
+        svg.onanimationend = () => svg.classList.remove("reviews-button-anim");
+    };
 
     return (
         <div id="home-reviews">
@@ -73,6 +77,11 @@ export function Reviews() {
                     </div>
                 ))}
             </div>
+            <button id="reviews-next-button" onClick={shiftCards} onMouseEnter={buttonAnim}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+            </button>
         </div>
     )
 }
