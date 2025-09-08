@@ -19,10 +19,10 @@ export function DesktopNavbar({ active, setActive }: NavInterface) {
         <nav id="navbar">
             <span id="navbar-left">
                 <img src={logo} alt="Logo"/>
-                <NavLink to={`discover${location.search}`} onClick={scrollTop}><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
+                <NavLink to={`/gallery/discover${location.search}`} onClick={scrollTop}><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
             </span>
             <span id="navbar-right">
-                 <NavLink to="about" onClick={scrollTop}>
+                 <NavLink to="/gallery/about" onClick={scrollTop}>
                     <Button
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -34,7 +34,7 @@ export function DesktopNavbar({ active, setActive }: NavInterface) {
                         setActive={() => setActive("about")}
                     />
                 </NavLink>
-                <NavLink to="profile" onClick={scrollTop}>
+                <NavLink to="/gallery/profile" onClick={scrollTop}>
                     <Button
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -46,7 +46,7 @@ export function DesktopNavbar({ active, setActive }: NavInterface) {
                         setActive={() => setActive("profile")}
                     />
                 </NavLink>
-                <NavLink to="login" onClick={scrollTop}>
+                <NavLink to="/gallery/login" onClick={scrollTop}>
                     <Button
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

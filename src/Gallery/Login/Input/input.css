@@ -1,24 +1,26 @@
-.login-input p {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-}
-
-.login-input input {
-    outline: none;
-    border-radius: 0;
-    border: 0;
-    font-size: 1.2rem;
-    font-family: inherit;
-    padding-block: 4px;
-}
-
-@media (max-width: 450px) {
+#GALLERY {
     .login-input p {
-        font-size: 1.2rem;
-        padding: 2px;
+        font-size: 1.4rem;
+        margin-bottom: 8px;
     }
-
+    
     .login-input input {
-        font-size: 1rem;
+        outline: none;
+        border-radius: 0;
+        border: 0;
+        font-size: 1.2rem;
+        font-family: inherit;
+        padding-block: 4px;
+    }
+    
+    @media (max-width: 450px) {
+        .login-input p {
+            font-size: 1.2rem;
+            padding: 2px;
+        }
+    
+        .login-input input {
+            font-size: 1rem;
+        }
     }
 }

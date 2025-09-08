@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+#HOME {
+    #header {
+        margin: 50px;
+
+        div:nth-child(2) {
+            transform: translateY(-12px);
+            font-size: 18px;
+            margin-left: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #FF8AAE;
+        }
+    }
+
+    #css {
+        font-size: 75px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        text-shadow: 4px 4px #FFF89A, 8px 8px #FF8AAE;
+        color: #FFB2A6;
+    }
+
+    #text {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 700;
+        font-style: oblique;
+        transform: translateY(8px) translateX(8px);
+        color: #FFB2A6;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}

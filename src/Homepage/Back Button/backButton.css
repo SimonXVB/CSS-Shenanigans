@@ -1,0 +1,24 @@
+#BACK-home-page-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    background-color: transparent;
+    transition: scale 100ms;
+    background-color: #000;
+    border-radius: 6px;
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#BACK-home-page-button:hover {
+    scale: 110%;
+}

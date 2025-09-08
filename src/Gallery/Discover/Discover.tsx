@@ -4,7 +4,7 @@ import { GalleryContent } from "./GalleryContent/GalleryContent"
 
 export function Discover() {
     return (
-        <section id="gallery">
+        <section id="discover">
             <GalleryHero/>
             <GalleryContent/>
         </section>

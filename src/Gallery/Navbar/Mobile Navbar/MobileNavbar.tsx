@@ -42,9 +42,9 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
             {open &&
                 <nav ref={navRef} id="mobile-navbar-open">
                     <div id="mobile-navbar-content">
-                        <NavLink to={`discover${location.search}`} onClick={navClick}><Button active={active === "discover"} setActive={() => setActive("discover")} title={"DISCOVER"}/></NavLink>
+                        <NavLink to={`/gallery/discover${location.search}`} onClick={navClick}><Button active={active === "discover"} setActive={() => setActive("discover")} title={"DISCOVER"}/></NavLink>
                         <div id="mobile-navbar-bottom">
-                            <NavLink to="about" onClick={navClick}>
+                            <NavLink to="/gallery/about" onClick={navClick}>
                                 <Button
                                     icon={
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -56,7 +56,7 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
                                     setActive={() => setActive("about")}
                                 />
                             </NavLink>
-                            <NavLink to="profile" onClick={navClick}>
+                            <NavLink to="/gallery/profile" onClick={navClick}>
                                 <Button
                                     icon={
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -68,7 +68,7 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
                                     setActive={() => setActive("profile")}
                                 />
                             </NavLink>
-                            <NavLink to="login" onClick={navClick}>
+                            <NavLink to="/gallery/login" onClick={navClick}>
                                 <Button
                                     icon={
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

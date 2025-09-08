@@ -1,72 +1,74 @@
-#gallery-hero {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Mozilla Headline", sans-serif;
-    background-color: #6211F5;
-    color: #F5E911;
-    padding: 48px;
-    padding-bottom: 64px;
-}
-
-#hero-text h1, #hero-text h2 {
-    margin: 0;
-}
-
-#hero-text a {
-    color: #F5E911;
-    text-decoration: underline;
-}
-
-#hero-text a:hover {
-    color: #B5AF3A;
-}
-
-#hero-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 2rem;
-}
-
-#hero-right svg {
-    height: 48px;
-    width: 48px;
-    animation: arrow-down 8s infinite ease-in-out;
-}
-
-@keyframes arrow-down {
-    from {
-        transform: translateY(0px);
-    }
-    5% {
-        transform: translateY(24px);
-    }
-    10%, to {
-        transform: translateY(0px);
-    }
-}
-
-@media (max-width: 800px) {
-    #hero-right {
-        display: none;
-    }
-}
-
-@media (max-width: 500px) {
+#GALLERY {
     #gallery-hero {
-        padding: 16px;
-        padding-block: 48px;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Mozilla Headline", sans-serif;
+        background-color: #6211F5;
+        color: #F5E911;
+        padding: 48px;
+        padding-bottom: 64px;
     }
-
-    #hero-text h1 {
-        font-size: 1.7rem;
+    
+    #hero-text h1, #hero-text h2 {
+        margin: 0;
     }
-
-    #hero-text h2 {
-        font-size: 1.3rem;
+    
+    #hero-text a {
+        color: #F5E911;
+        text-decoration: underline;
     }
-
-    #hero-text p {
-        font-size: 0.9rem;
+    
+    #hero-text a:hover {
+        color: #B5AF3A;
+    }
+    
+    #hero-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 2rem;
+    }
+    
+    #hero-right svg {
+        height: 48px;
+        width: 48px;
+        animation: arrow-down 8s infinite ease-in-out;
+    }
+    
+    @keyframes arrow-down {
+        from {
+            transform: translateY(0px);
+        }
+        5% {
+            transform: translateY(24px);
+        }
+        10%, to {
+            transform: translateY(0px);
+        }
+    }
+    
+    @media (max-width: 800px) {
+        #hero-right {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        #gallery-hero {
+            padding: 16px;
+            padding-block: 48px;
+        }
+    
+        #hero-text h1 {
+            font-size: 1.7rem;
+        }
+    
+        #hero-text h2 {
+            font-size: 1.3rem;
+        }
+    
+        #hero-text p {
+            font-size: 0.9rem;
+        }
     }
 }

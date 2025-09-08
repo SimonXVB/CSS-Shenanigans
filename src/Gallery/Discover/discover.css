@@ -1,3 +1,5 @@
-#gallery {
-    flex-grow: 1;
+#GALLERY {
+    #discover {
+        flex-grow: 1;
+    }
 }
