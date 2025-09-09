@@ -134,11 +134,6 @@
         animation: move-arrow 500ms ease-in-out;
     }
 
-    @keyframes move-arrow {
-        50% {transform: translateX(50%)}
-        100% {transform: translateX(0%)}
-    }
-
     @media (max-width: 880px) {
         #home-reviews-h1 {
             padding-right: 16px;
@@ -168,6 +163,11 @@
             height: 475px;
         }
     }
+}
+
+@keyframes move-arrow {
+    50% {transform: translateX(50%)}
+    100% {transform: translateX(0%)}
 }
 
 @keyframes from-out-to-5 {

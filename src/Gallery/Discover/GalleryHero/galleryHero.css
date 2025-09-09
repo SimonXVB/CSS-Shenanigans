@@ -35,18 +35,6 @@
         animation: arrow-down 8s infinite ease-in-out;
     }
     
-    @keyframes arrow-down {
-        from {
-            transform: translateY(0px);
-        }
-        5% {
-            transform: translateY(24px);
-        }
-        10%, to {
-            transform: translateY(0px);
-        }
-    }
-    
     @media (max-width: 800px) {
         #hero-right {
             display: none;
@@ -70,5 +58,17 @@
         #hero-text p {
             font-size: 0.9rem;
         }
+    }
+}
+
+@keyframes arrow-down {
+    from {
+        transform: translateY(0px);
+    }
+    5% {
+        transform: translateY(24px);
+    }
+    10%, to {
+        transform: translateY(0px);
     }
 }

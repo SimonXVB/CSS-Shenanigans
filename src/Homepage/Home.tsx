@@ -1,5 +1,5 @@
 import "./home.css"
-import { NavLink } from "react-router"
+import { Panel } from "./Panel/Panel"
 
 export function Home() {
     return (
@@ -11,9 +11,13 @@ export function Home() {
                 </div>
                 <div>A showcase site for some of my CSS projects.</div>
             </div>
-            <NavLink to={"business"}>Business</NavLink>
-            <br/>
-            <NavLink to={"gallery"}>Gallery</NavLink>
+            <div id="panels">
+                <Panel to="business" imgSrc="src/Homepage/Assets/business-logo.png" text="Business" alt="Business Logo"/>
+                <Panel to="gallery" imgSrc="src/Homepage/Assets/gallery-logo.png" text="Gallery" alt="Gallery Logo"/>
+            </div>
+            <div id="footer">
+                <a href="https://github.com/SimonXVB/CSS-Shenanigans" target="_blank">GitHub</a>
+            </div>
         </div>
     )
 };

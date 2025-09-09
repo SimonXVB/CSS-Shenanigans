@@ -15,12 +15,13 @@
         animation: spin 1s infinite linear;
     }
     
-    @keyframes spin {
-        from {
-            rotate: 0deg;
-        }
-        to {
-            rotate: 360deg;
-        }
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
     }
 }

@@ -9,7 +9,7 @@ export function Login() {
     return (
         <section id="login">
             <div id="form-wrapper">
-                <form id="login-form" onSubmit={e => { e.preventDefault(); nav("/profile") }}>
+                <form id="login-form" onSubmit={e => { e.preventDefault(); nav("/gallery/profile") }}>
                     <span>Welcome back!</span>
                     <Input title={"E-Mail:"}/>
                     <Input title={"Password:"}/>
