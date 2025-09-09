@@ -1,4 +1,4 @@
-import "./galleryhero.css"
+import "./galleryHero.css"
 
 export function GalleryHero() {
     return (
