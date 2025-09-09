@@ -1,37 +1,42 @@
 import { useRef } from "react";
 import "./reviews.css"
+import review1 from "../../Assets/review1.jpg"
+import review2 from "../../Assets/review2.jpg"
+import review3 from "../../Assets/review3.jpg"
+import review4 from "../../Assets/review4.jpg"
+import review5 from "../../Assets/review5.jpg"
+import review6 from "../../Assets/review6.jpg"
 
 export function Reviews() {
-    const imgSrc = "src/Business/Assets/"
 
     const cards = [
         {
-            img: imgSrc + "review1.jpg",
+            img: review1,
             name: "John Business Name",
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, autem quo. Dignissimos est obcaecati distinctio perspiciatis culpa laborum mollitia totam doloribus deleniti omnis repellat esse, officiis, iste fugiat! Aut, asperiores."
         },
         {
-            img: imgSrc + "review2.jpg",
+            img: review2,
             name: "Tim Apple",
             desc: "Praesent eu metus quis erat blandit porta ac ac tortor. Morbi tincidunt pulvinar dictum. Nam ut varius nisl. Suspendisse vel augue at tortor vehicula accumsan. Ut suscipit purus ante, vel hendrerit ex egestas non. Ut nec pulvinar dui. In pretium sem tortor, ut lobortis nulla hendrerit ac. Vestibulum id metus magna. Ut non faucibus dolor. Nam convallis commodo eros, ut sollicitudin augue. Duis nec venenatis lorem. Etiam interdum nibh et enim cursus, finibus volutpat lacus tristique."
         },
         {
-            img: imgSrc + "review3.jpg",
+            img: review3,
             name: "Janette Apple",
             desc: "Nulla mollis, purus et tincidunt sagittis, nisl nunc maximus est, at lacinia sapien sem eget erat. Quisque consequat, nunc a sollicitudin porttitor, dolor metus convallis dui, eu cursus metus elit eget augue. Morbi et dapibus felis. Pellentesque quis tristique enim. Proin venenatis nisl a tortor varius, eu lacinia magna pellentesque. Nunc faucibus quam ac ipsum feugiat ornare ac in libero. Maecenas massa nunc, semper vel risus pulvinar, rutrum fermentum enim. Vestibulum viverra hendrerit ex id aliquet."
         },
         {
-            img: imgSrc + "review4.jpg",
+            img: review4,
             name: "Business People Inc.",
             desc: "Sed quis sem in massa eleifend varius. Duis lacinia pellentesque purus sed vehicula. Vestibulum cursus nibh eu odio malesuada auctor. Etiam sollicitudin vitae neque malesuada elementum. Maecenas ac diam eget erat suscipit ullamcorper. Etiam tristique maximus dui ac pulvinar. Phasellus imperdiet felis tortor, nec fermentum augue efficitur ut."
         },
         {
-            img: imgSrc + "review5.jpg",
+            img: review5,
             name: "Business Couple Ltd.",
             desc: "Vestibulum at nisi a lectus luctus efficitur non eu nisl. Vivamus sit amet scelerisque velit. Ut id sollicitudin nunc. Quisque vestibulum malesuada faucibus. Proin sed facilisis lacus. Fusce venenatis eros nec pretium commodo."
         },
         {
-            img: imgSrc + "review6.jpg",
+            img: review6,
             name: "Business Lady",
             desc: "Ut id sollicitudin nunc. Quisque vestibulum malesuada faucibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, autem quo. Dignissimos est obcaecati distinctio perspiciatis culpa laborum mollitia totam doloribus deleniti omnis repellat esse, officiis, iste fugiat! Aut, asperiores."
         }

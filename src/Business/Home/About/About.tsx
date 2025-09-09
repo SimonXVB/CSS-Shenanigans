@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import "./about.css"
+import biz1 from "../../Assets/biz1.jpg"
+import biz2 from "../../Assets/biz2.jpg"
+import biz3 from "../../Assets/biz3.jpg"
+import biz4 from "../../Assets/biz4.jpg"
+import biz5 from "../../Assets/biz5.jpg"
 
 export function About() {
     const [currentImg, setCurrentImg] = useState<number>(1);
     const imageIntervalRef = useRef<number>(undefined);
     const imageRef = useRef<HTMLImageElement>(null);
-
-    const imgSrc = "src/Business/Assets/"
 
     function changeSrc(num: number) {
         clearInterval(imageIntervalRef.current);
@@ -35,18 +38,18 @@ export function About() {
             <div id="home-about-content">
                 <div id="home-about-images">
                     <div id="home-about-main-image-wrapper">
-                        <img ref={imageRef} src={imgSrc + `biz1.jpg`} style={{opacity: currentImg === 1 ? "1" : "0"}} alt="Home About Main Image"/>
-                        <img ref={imageRef} src={imgSrc + `biz2.jpg`} style={{opacity: currentImg === 2 ? "1" : "0"}} alt="Home About Main Image"/>
-                        <img ref={imageRef} src={imgSrc + `biz3.jpg`} style={{opacity: currentImg === 3 ? "1" : "0"}} alt="Home About Main Image"/>
-                        <img ref={imageRef} src={imgSrc + `biz4.jpg`} style={{opacity: currentImg === 4 ? "1" : "0"}} alt="Home About Main Image"/>
-                        <img ref={imageRef} src={imgSrc + `biz5.jpg`} style={{opacity: currentImg === 5 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={biz1} style={{opacity: currentImg === 1 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={biz2} style={{opacity: currentImg === 2 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={biz3} style={{opacity: currentImg === 3 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={biz4} style={{opacity: currentImg === 4 ? "1" : "0"}} alt="Home About Main Image"/>
+                        <img ref={imageRef} src={biz5} style={{opacity: currentImg === 5 ? "1" : "0"}} alt="Home About Main Image"/>
                     </div>
                     <div id="home-about-images-select">
-                        <img onClick={() => changeSrc(1)} src={imgSrc + "biz1.jpg"} className={currentImg === 1 ? "image-active" : ""} alt="Stock 1"/>
-                        <img onClick={() => changeSrc(2)} src={imgSrc + "biz2.jpg"} className={currentImg === 2 ? "image-active" : ""} alt="Stock 2"/>
-                        <img onClick={() => changeSrc(3)} src={imgSrc + "biz3.jpg"} className={currentImg === 3 ? "image-active" : ""} alt="Stock 3"/>
-                        <img onClick={() => changeSrc(4)} src={imgSrc + "biz4.jpg"} className={currentImg === 4 ? "image-active" : ""} alt="Stock 4"/>
-                        <img onClick={() => changeSrc(5)} src={imgSrc + "biz5.jpg"} className={currentImg === 5 ? "image-active" : ""} alt="Stock 5"/>
+                        <img onClick={() => changeSrc(1)} src={biz1} className={currentImg === 1 ? "image-active" : ""} alt="Stock 1"/>
+                        <img onClick={() => changeSrc(2)} src={biz2} className={currentImg === 2 ? "image-active" : ""} alt="Stock 2"/>
+                        <img onClick={() => changeSrc(3)} src={biz3} className={currentImg === 3 ? "image-active" : ""} alt="Stock 3"/>
+                        <img onClick={() => changeSrc(4)} src={biz4} className={currentImg === 4 ? "image-active" : ""} alt="Stock 4"/>
+                        <img onClick={() => changeSrc(5)} src={biz5} className={currentImg === 5 ? "image-active" : ""} alt="Stock 5"/>
                     </div>
                 </div>
                 <div id="home-about-desc">

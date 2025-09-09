@@ -1,4 +1,5 @@
 import "./hero.css"
+import logo from "../../Assets/Logo.png"
 
 export function Hero() {
     return (
@@ -9,7 +10,7 @@ export function Hero() {
                 <button>++ Contact Us ++</button>
             </div>
             <div id="home-hero-img">
-                <img src={"src/Business/Assets/Logo.png"} alt="Logo"/>
+                <img src={logo} alt="Logo"/>
                 <div id="home-hero-carousel-wrapper">
                     <div id="home-hero-carousel">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
