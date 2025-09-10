@@ -8,7 +8,7 @@ import { Footer } from "./Footer/Footer";
 
 export function Gallery() {
     return (
-        <div id="GALLERY" style={{minHeight: "100vh", display: "flex", flexDirection: "column"}}>
+        <div style={{minHeight: "100vh", display: "flex", flexDirection: "column"}}>
             <Navbar/>
             <Routes>
                 <Route path="discover" element={<Discover/>}/>

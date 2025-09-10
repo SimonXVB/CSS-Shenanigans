@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./profileContent.css"
+import styles from "./profileContent.module.css"
 import { Loading } from "../../Loading/Loading";
 import { Product } from "../../Product/Product";
 
@@ -30,9 +30,9 @@ export function ProfileContent() {
         <div>
             {loading && <Loading/>}
             {!loading && 
-                <div id="profile-content">
-                    <p id="profile-content-name">MY Collection</p>
-                    <div id="profile-content-wrapper">
+                <div className={styles.profile_content}>
+                    <p className={styles.profile_content_name}>MY Collection</p>
+                    <div className={styles.profile_content_wrapper}>
                         {content.map((product, i) => (
                             <Product product={product} i={i} key={product["id"]}/>
                         ))}

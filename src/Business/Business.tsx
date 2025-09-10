@@ -4,7 +4,7 @@ import { Footer } from "./Footer/Footer";
 
 export function Business() {
     return (
-        <div id="BUSINESS">
+        <div>
             <Navbar/>
             <Home/>
             <Footer/>

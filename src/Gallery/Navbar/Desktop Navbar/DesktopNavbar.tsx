@@ -1,4 +1,4 @@
-import "./desktopNavbar.css"
+import styles from "./desktopNavbar.module.css"
 import logo from "../../Assets/dummyLogo.png"
 import { Button } from "../Button/Button"
 import { NavLink, useLocation } from "react-router"
@@ -16,12 +16,12 @@ export function DesktopNavbar({ active, setActive }: NavInterface) {
     };
 
     return (
-        <nav id="navbar">
-            <span id="navbar-left">
+        <nav className={styles.navbar}>
+            <span className={styles.navbar_left}>
                 <img src={logo} alt="Logo"/>
                 <NavLink to={`/gallery/discover${location.search}`} onClick={scrollTop}><Button title={"DISCOVER"} active={active === "discover"} setActive={() => setActive("discover")}/></NavLink>
             </span>
-            <span id="navbar-right">
+            <span className={styles.navbar_right}>
                  <NavLink to="/gallery/about" onClick={scrollTop}>
                     <Button
                         icon={

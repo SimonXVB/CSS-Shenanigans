@@ -1,0 +1,39 @@
+.panel {
+    position: relative;
+    text-decoration: none;
+    padding: 28px;
+    padding-bottom: 0;
+    background-color: #FF8AAE;
+    box-shadow: 2px 4px 8px #424242;
+    transition: all 350ms;
+
+    img {
+        position: relative;
+        width: 200px;
+        z-index: 5;
+    }
+
+    p {
+        position: relative;
+        font-family: "Cal Sans", sans-serif;
+        color: #000;
+        font-size: 1.4rem;
+        z-index: 5;
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        path {
+            fill: #fff89a;
+        }
+    }
+}
+
+.panel:hover {
+    background-color: #fff89a;
+    scale: 105%;
+}

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./reviews.css"
+import styles from "./reviews.module.css"
 import review1 from "../../Assets/review1.jpg"
 import review2 from "../../Assets/review2.jpg"
 import review3 from "../../Assets/review3.jpg"
@@ -44,7 +44,7 @@ export function Reviews() {
 
     const isAnimatingRef = useRef<boolean>(false);
     const cardsRef = useRef<HTMLDivElement[]>([]);
-    const animationsRef = useRef<string[]>(["from-2-to-1", "from-3-to-2", "from-4-to-3", "from-5-to-4", "from-out-to-5", "from-1-to-out"]);
+    const animationsRef = useRef<string[]>([styles.from_2_to_1, styles.from_3_to_2, styles.from_4_to_3, styles.from_5_to_4, styles.from_out_to_5, styles.from_1_to_out]);
 
     function shiftCards() {
         if(!isAnimatingRef.current) {
@@ -52,39 +52,42 @@ export function Reviews() {
             animationsRef.current.unshift(animationsRef.current.pop()!);
 
             cardsRef.current.forEach((card, i) => {
-                card.style.animation = `${animationsRef.current[i]} 1s ease-in-out forwards`;
+                const nextIndex = i+1 !== animationsRef.current.length ? i+1 : 0;
+
+                card.classList.remove(animationsRef.current[nextIndex]);
+                card.classList.add(animationsRef.current[i]);
             });
 
             cardsRef.current[0].onanimationend = () => isAnimatingRef.current = false;
         };
     };
 
-    function buttonAnim() {
-        const svg = document.querySelector("#reviews-next-button svg") as HTMLElement;
+    function buttonAnim(e: React.MouseEvent) {
+        const svg = e.currentTarget.children[0] as HTMLElement;
         
-        svg.classList.add("reviews-button-anim");
-        svg.onanimationend = () => svg.classList.remove("reviews-button-anim");
+        svg.classList.add(styles.reviews_button_anim);
+        svg.onanimationend = () => svg.classList.remove(styles.reviews_button_anim);
     };
 
     return (
-        <div id="home-reviews">
-            <div id="home-reviews-h1">
+        <div className={styles.home_reviews}>
+            <div className={styles.home_reviews_h1}>
                 <h1>Testimonials</h1>
             </div>
-            <div id="home-reviews-container">
+            <div className={styles.home_reviews_container}>
                 {cards.map((card, i) => (
-                    <div key={i} className="review-card" ref={ref => {cardsRef.current[i] = ref!}}>
-                        <div className="card-desc">
+                    <div key={i} className={styles.review_card} ref={ref => {cardsRef.current[i] = ref!}}>
+                        <div className={styles.card_desc}>
                             {card.desc}
                         </div>
-                        <div className="card-bottom">
+                        <div className={styles.card_bottom}>
                             <img src={card.img} alt="Card image"/>
                             <p>{card.name}</p>
                         </div>
                     </div>
                 ))}
             </div>
-            <button id="reviews-next-button" onClick={shiftCards} onMouseEnter={buttonAnim}>
+            <button className={styles.reviews_next_button} onClick={shiftCards} onMouseEnter={e => buttonAnim(e)}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import "./mobileNavbar.css"
+import styles from "./mobileNavbar.module.css"
 import { Button } from "../Button/Button";
 import { NavLink, useLocation } from "react-router";
 
@@ -24,9 +24,12 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
 
             document.body.style.overflow = "hidden";
         } else {
-            navRef.current!.style.animation = "fade-out 150ms forwards ease-in";
+            navRef.current!.classList.toggle(styles.fade_out);
 
-            navRef.current!.onanimationend = () => setOpen(false);
+            navRef.current!.onanimationend = () => {
+                navRef.current!.classList.toggle(styles.fade_out);
+                setOpen(false);
+            }
 
             document.body.style.overflow = "scroll";
         };
@@ -34,16 +37,16 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
 
     return (
         <>
-            <button id="navbar-closed-button" onClick={() => toggleNavbar(true)}>
+            <button className={styles.navbar_closed_button} onClick={() => toggleNavbar(true)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                 </svg>
             </button>
             {open &&
-                <nav ref={navRef} id="mobile-navbar-open">
-                    <div id="mobile-navbar-content">
+                <nav ref={navRef} className={styles.mobile_navbar_open}>
+                    <div className={styles.mobile_navbar_content}>
                         <NavLink to={`/gallery/discover${location.search}`} onClick={navClick}><Button active={active === "discover"} setActive={() => setActive("discover")} title={"DISCOVER"}/></NavLink>
-                        <div id="mobile-navbar-bottom">
+                        <div className={styles.mobile_navbar_bottom}>
                             <NavLink to="/gallery/about" onClick={navClick}>
                                 <Button
                                     icon={
@@ -83,7 +86,7 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
                             </NavLink>
                         </div>
                     </div>
-                    <button id="navbar-open-button" onClick={() => toggleNavbar(false)}>
+                    <button className={styles.navbar_open_button} onClick={() => toggleNavbar(false)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
                         </svg>

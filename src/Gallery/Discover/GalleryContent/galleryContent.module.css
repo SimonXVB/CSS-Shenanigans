@@ -1,0 +1,37 @@
+.gallery_content {
+    flex-grow: 1;
+    margin-top: 64px;
+    font-family: "Mozilla Headline", sans-serif;
+}
+
+.content_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-inline: 24px;
+}
+
+.content_pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.content_pages > div > span, .first_page {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.content_pages > div > span:hover, .first_page:hover {
+    background-color: rgb(98, 64, 160, 0.5);
+}
+
+.current_page {
+    background-color: #6240A0;
+    color: #F5E911;
+    padding: 12px;
+    cursor: pointer;
+    margin-inline: 6px;
+}

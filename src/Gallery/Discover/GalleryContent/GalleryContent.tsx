@@ -1,7 +1,7 @@
+import styles from "./galleryContent.module.css"
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router";
 import { Loading } from "../../Loading/Loading";
-import "./galleryContent.css"
 import { Product } from "../../Product/Product";
 
 export function GalleryContent() {
@@ -12,7 +12,6 @@ export function GalleryContent() {
     const [currentPage, setCurrentPage] = useState<number>(Number(searchParams.get("page")) || 1);
 
     const totalPages = useRef<number>(null);
-    
     const LIMIT = 30;
 
     async function getContent(page: number) {
@@ -51,22 +50,22 @@ export function GalleryContent() {
     }, []);
 
     return (
-        <section id="gallery-content">
+        <section className={styles.gallery_content}>
             {loading && <Loading/>}
             {!loading && 
                 <>
-                    <div id="content-wrapper">
+                    <div className={styles.content_wrapper}>
                         {content.map((product, i) => (
                             <Product product={product} i={i} key={product["id"]}/>
                         ))}
                     </div>
-                    <div id="content-pages">
-                        {currentPage >= 4 && <span id="first-page" onClick={() => setPage(1)}>1 ...</span>}
+                    <div className={styles.content_pages}>
+                        {currentPage >= 4 && <span className={styles.first_page} onClick={() => setPage(1)}>1 ...</span>}
                         <div>
                             {(currentPage - 2) > 0 && <span onClick={() => setPage(currentPage - 2)}>{currentPage - 2}</span>}
                             {(currentPage - 1) > 0 && <span onClick={() => setPage(currentPage - 1)}>{currentPage - 1}</span>}
                         </div>
-                        <span id="current-page">{currentPage}</span>
+                        <span className={styles.current_page}>{currentPage}</span>
                         <div>
                             {(currentPage + 1) <= totalPages.current! && <span onClick={() => setPage(currentPage + 1)}>{currentPage + 1}</span>}
                             {(currentPage + 2) <= totalPages.current! && <span onClick={() => setPage(currentPage + 2)}>{currentPage + 2}</span>}

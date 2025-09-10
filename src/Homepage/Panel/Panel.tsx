@@ -1,4 +1,4 @@
-import "./panel.css"
+import styles from "./panel.module.css"
 import { NavLink } from "react-router"
 
 interface PanelInterface {
@@ -10,7 +10,7 @@ interface PanelInterface {
 
 export function Panel({to, imgSrc, text, alt}: PanelInterface) {
     return (
-        <NavLink className="panel" to={to}>
+        <NavLink className={styles.panel} to={to}>
             <img src={imgSrc} alt={alt}/>
             <p>{text}</p>
             <svg viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg">

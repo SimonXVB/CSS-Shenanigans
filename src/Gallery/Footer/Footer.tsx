@@ -1,10 +1,10 @@
-import "./footer.css"
+import styles from "./footer.module.css"
 import logo from "../Assets/dummyLogoYellow.png"
 import { NavLink } from "react-router"
 
 export function Footer() {
     return (
-        <footer id="footer">
+        <footer className={styles.footer}>
             <div>
                 <img src={logo} alt="Logo"/>
                 <ul>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "./card.css"
+import styles from "./card.module.css"
 
 export function Card() {
     const [loading, setLoading] = useState<boolean>(true);
@@ -28,16 +28,16 @@ export function Card() {
     }, []);
 
     return (
-        <div id="card-wrapper">
-            <div id="card">
+        <div className={styles.card_wrapper} id="card-wrapper">
+            <div className={styles.card}>
                 <img src={!loading ? dummy!["image"] : undefined}/>
                 {!loading &&
                     <>
-                        <div id="profile-top">
-                            <p id="profile-name">{dummy!["firstName"] + " " + dummy!["lastName"]}</p>
-                            <p id="profile-location">{dummy!["address"]["city"] + " - " + dummy!["address"]["state"]}</p>
+                        <div className={styles.profile_top}>
+                            <p className={styles.profile_name}>{dummy!["firstName"] + " " + dummy!["lastName"]}</p>
+                            <p className={styles.profile_location}>{dummy!["address"]["city"] + " - " + dummy!["address"]["state"]}</p>
                         </div>
-                        <div id="profile-bottom">
+                        <div className={styles.profile_bottom}>
                             <span>Followers: {Math.floor(Math.random() * 2500)}</span>
                             <span>Following: {Math.floor(Math.random() * 2500)}</span>
                             <span>Photos: 30</span>

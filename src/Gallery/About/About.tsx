@@ -1,8 +1,8 @@
-import "./about.css"
+import styles from "./about.module.css"
 
 export function About() {
     return (
-        <section id="about">
+        <section className={styles.about}>
             <h1>About</h1>
             <p>This is a CSS only project. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam possimus, exercitationem veniam quisquam tenetur a aperiam. Expedita est eveniet adipisci magni quaerat! Nostrum officiis quaerat sed suscipit error esse quidem. Made to get better at designing stuff with CSS.</p>
             <p>That's it :). Pellentesque bibendum congue justo non posuere. Etiam efficitur erat vitae eleifend euismod. Aliquam quam purus, laoreet sit amet mi in, tempor cursus velit. Pellentesque eros purus, posuere sed fringilla ultricies, sollicitudin sed erat. Maecenas sagittis orci a elit commodo, et tempor felis maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vel vulputate enim.</p>

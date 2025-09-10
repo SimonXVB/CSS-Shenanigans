@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(255, 178, 166, 0.3);
+}
+
+.header {
+    padding-left: 16px;
+    padding-top: 16px;
+
+    div:nth-child(2) {
+        transform: translateY(-5px);
+        font-size: 15px;
+        margin-left: 36px;
+        font-family: "Cal Sans", sans-serif;
+        color: #FF8AAE;
+    }
+}
+
+.css {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: #FFB2A6;
+    text-shadow: 3px 3px #FFF89A, 6px 6px #FF8AAE;
+    font-style: oblique;
+    letter-spacing: 2px;
+}
+
+.text {
+    display: inline-block;
+    font-size: 20px;
+    font-style: oblique;
+    transform: translateY(8px) translateX(8px);
+    color: #FF8AAE;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 32px;
+    margin-inline: 12px;
+    padding-top: 48px;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.footer {
+    text-align: center;
+    margin-block: 12px;
+
+    a {
+        font-family: "Cal Sans", sans-serif;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.8rem;
+    }
+
+    a:hover {
+        color: #333333;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        div:nth-child(2) {
+            transform: translateY(-2px);
+            font-size: 12px;
+        }
+    }
+
+    .css {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+}

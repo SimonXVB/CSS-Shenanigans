@@ -1,0 +1,42 @@
+.navbar_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "Mozilla Headline", sans-serif;
+    font-weight: 700;
+    color: #6211F5;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    background-size: 210% 100%;
+    background-image: linear-gradient(to left, #6211F5 50%, transparent 50%);
+    transition: all 200ms ease-in;
+}
+
+.navbar_button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar_button:hover {
+    color: #F5EA12 !important;
+    background-position: 100% 0%;
+    scale: 105%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (width < 799px) {
+    .navbar_button {
+        font-size: 1.5rem;
+        background-color: #F5EA12;
+        color: #6211F5;
+        padding-block: 8px;
+        width: 100%;
+        box-shadow: 4px 0px 12px 2px #646464;
+    }
+}

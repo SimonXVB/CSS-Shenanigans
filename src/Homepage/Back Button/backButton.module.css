@@ -1,4 +1,4 @@
-#BACK-home-page-button {
+.back_button {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -17,6 +17,6 @@
     }
 }
 
-#BACK-home-page-button:hover {
+.back_button:hover {
     scale: 110%;
 }
