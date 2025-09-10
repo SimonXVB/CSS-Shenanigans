@@ -8,8 +8,8 @@ export function Footer() {
             <div>
                 <img src={logo} alt="Logo"/>
                 <ul>
-                    <li><NavLink to={"about"}>About</NavLink></li>
-                    <li><NavLink to={"discover"}>Discover</NavLink></li>
+                    <li><NavLink to={"/gallery/about"}>About</NavLink></li>
+                    <li><NavLink to={"/gallery/discover"}>Discover</NavLink></li>
                     <li><a href="https://github.com/SimonXVB" target="_blank">Github</a></li>
                 </ul>
             </div>
