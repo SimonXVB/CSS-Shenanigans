@@ -3,13 +3,17 @@ import logo from "../Assets/dummyLogoYellow.png"
 import { NavLink } from "react-router"
 
 export function Footer() {
+    function click() {
+        scrollTo(0, 0);
+    }
+
     return (
         <footer className={styles.footer}>
             <div>
                 <img src={logo} alt="Logo"/>
                 <ul>
-                    <li><NavLink to={"/gallery/about"}>About</NavLink></li>
-                    <li><NavLink to={"/gallery/discover"}>Discover</NavLink></li>
+                    <li onClick={click}><NavLink to={"/gallery/about"}>About</NavLink></li>
+                    <li onClick={click}><NavLink to={"/gallery/discover"}>Discover</NavLink></li>
                     <li><a href="https://github.com/SimonXVB" target="_blank">Github</a></li>
                 </ul>
             </div>
