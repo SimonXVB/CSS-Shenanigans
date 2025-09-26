@@ -10,10 +10,9 @@
     display: flex;
     align-items: center;
     gap: 48px;
-    background-color: #6211F5;
+    background-color: #8e51ff;
     padding: 48px;
     margin-inline: 24px;
-    box-shadow: 8px 8px 2px #B5AF3A;
     color: #F5E911;
 }
 
@@ -28,20 +27,18 @@
 
 .login_form button {
     font-family: inherit;
-    margin-top: 48px;
+    margin-top: 32px;
     background: none;
     border: 0;
-    color: #F5E911 !important;
+    color: #8e51ff !important;
+    background-color: #F5E911;
     font-size: 1.5rem;
     cursor: pointer;
-    background-size: 210% 100%;
-    background-image: linear-gradient(to right, #6211F5 50%, #F5E911 50%);
-    transition: all 200ms ease-in;
-    max-width: 80%;
 }
 
 .login_form button:hover {
-    color: #6211F5 !important;
+    color: #F5E911 !important;
+    background-color: #8e51ff;
     background-position: 100% 0%;
 }
 
@@ -68,7 +65,7 @@
 }
 
 .form_check input[type="checkbox"] {
-    accent-color: #F5E911;
+    accent-color: #8e51ff;
 }
 
 .login_right {
@@ -124,17 +121,15 @@
 
     .login_form button {
         padding: 8px;
-        border-radius: 12px;
         width: 200px;
     }
 
     .login_right {
         border-left: 0;
         padding-left: 0;
-        background-color: #6211F5;
+        background-color: #8e51ff;
         padding: 24px;
         padding-inline: 32px;
-        border-radius: 12px;
     }
 
     .login_right img {
@@ -146,7 +141,7 @@
     }
     
     .form_check {
-        background-color: #6211F5;
+        color: #8e51ff;
         padding: 8px;
         border-radius: 8px;
     }
@@ -156,12 +151,12 @@
         flex-direction: column;
         align-items: center;
         padding: 8px;
-        background-color: #6211F5;
         gap: 6px;
         border-radius: 12px;
 
         a {
             margin-top: 0;
+            color: #8e51ff;
         }
     }
 }

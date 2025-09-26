@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from "react-router";
 import { Navbar } from "./Navbar/Navbar";
 import { Discover } from "./Discover/Discover";
-import { About } from "./About/About";
 import { Profile } from "./Profile/Profile";
 import { Login } from "./Login/Login";
 import { Footer } from "./Footer/Footer";
@@ -12,7 +11,6 @@ export function Gallery() {
             <Navbar/>
             <Routes>
                 <Route path="discover" element={<Discover/>}/>
-                <Route path="about" element={<About/>}/>
                 <Route path="profile" element={<Profile/>}/>
                 <Route path="login" element={<Login/>}/>
                 <Route path="*" element={<Navigate to="/gallery/discover"/>}/>

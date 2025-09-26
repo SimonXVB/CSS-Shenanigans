@@ -14,10 +14,9 @@
 
 @media (max-width: 450px) {
     .login_input {
-        background-color: #6211F5;
+        color: #8e51ff;
         padding: 8px;
         margin-bottom: 8px;
-        border-radius: 8px;
     }
 
     .login_input p {
@@ -28,7 +27,7 @@
 
     .login_input input {
         font-size: 1rem;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #fff;
+        border-bottom: 2px solid #8e51ff;
+        color: #8e51ff;
     }
 }

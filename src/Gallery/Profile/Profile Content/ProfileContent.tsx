@@ -31,7 +31,7 @@ export function ProfileContent() {
             {loading && <Loading/>}
             {!loading && 
                 <div className={styles.profile_content}>
-                    <p className={styles.profile_content_name}>MY Collection</p>
+                    <p className={styles.profile_content_name}>Collection</p>
                     <div className={styles.profile_content_wrapper}>
                         {content.map((product, i) => (
                             <Product product={product} i={i} key={product["id"]}/>

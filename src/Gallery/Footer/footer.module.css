@@ -5,16 +5,17 @@
     flex-direction: column;
     width: 100vw;
     min-height: 250px;
-    background-color: #6211F5;
+    background-color: #8e51ff;
     gap: 32px;
     font-family: "Mozilla Headline", sans-serif;
     color: #F5EA12;
     margin-top: 128px;
 }
 
-.footer div {
+.footer > div {
     display: flex;
-    gap: 128px;
+    align-items: center;
+    gap: 116px;
 }
 
 .footer img {
@@ -49,7 +50,7 @@
         padding-block: 24px;
     }
 
-    .footer div {
+    .footer > div {
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;

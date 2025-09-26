@@ -1,11 +1,10 @@
 .gallery_hero {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     font-family: "Mozilla Headline", sans-serif;
-    background-color: #6211F5;
-    color: #F5E911;
+    background-color: #8e51ff;
+    color: #fff;
     padding: 48px;
-    padding-bottom: 64px;
 }
 
 .hero_text h1, .hero_text h2 {
@@ -13,31 +12,12 @@
 }
 
 .hero_text a {
-    color: #F5E911;
+    color: #fff;
     text-decoration: underline;
 }
 
 .hero_text a:hover {
-    color: #B5AF3A;
-}
-
-.hero_right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 2rem;
-}
-
-.hero_right svg {
-    height: 48px;
-    width: 48px;
-    animation: arrow-down 8s infinite ease-in-out;
-}
-
-@media (max-width: 800px) {
-    .hero_right {
-        display: none;
-    }
+    color: #d8d8d8;
 }
 
 @media (max-width: 500px) {

@@ -4,12 +4,7 @@ import logo from "../../Assets/dummyLogoYellow.png"
 import { Button } from "../Button/Button"
 import { NavLink, useLocation } from "react-router"
 
-interface NavInterface {
-    active: string,
-    setActive: (tab: string) => void
-}
-
-export function MobileNavbar({ active, setActive }: NavInterface) {
+export function MobileNavbar() {
     const [open, setOpen] = useState(false);
     const location = useLocation();
     const navRef = useRef<HTMLDivElement>(null);
@@ -49,21 +44,9 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
             {open &&
                 <div ref={navRef} className={styles.mobile_navbar_open}>
                     <NavLink to={`/gallery/discover${location.search}`} onClick={navClick}>
-                        <Button active={active === "discover"} setActive={() => setActive("discover")} title={"DISCOVER"}/>
+                        <Button title={"DISCOVER"}/>
                     </NavLink>
                     <div className={styles.mobile_navbar_bottom}>
-                        <NavLink to="/gallery/about" onClick={navClick}>
-                            <Button
-                                icon={
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0"/>
-                                    </svg>
-                                }
-                                title={"About"}
-                                active={active === "about"} 
-                                setActive={() => setActive("about")}
-                            />
-                        </NavLink>
                         <NavLink to="/gallery/profile" onClick={navClick}>
                             <Button
                                 icon={
@@ -72,8 +55,6 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
                                     </svg>
                                 }
                                 title={"Profile"}
-                                active={active === "profile"} 
-                                setActive={() => setActive("profile")}
                             />
                         </NavLink>
                         <NavLink to="/gallery/login" onClick={navClick}>
@@ -85,8 +66,6 @@ export function MobileNavbar({ active, setActive }: NavInterface) {
                                     </svg>
                                 }
                                 title={"Login"}
-                                active={active === "login"} 
-                                setActive={() => setActive("login")}
                             />
                         </NavLink>
                     </div>

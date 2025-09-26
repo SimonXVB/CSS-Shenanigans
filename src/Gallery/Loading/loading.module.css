@@ -9,7 +9,7 @@
     width: 100px;
     aspect-ratio: 1/1;
     border-radius: 999px;
-    border: 10px solid #F5E911;
+    border: 10px solid #8e51ff;
     border-right: 10px solid transparent;
     animation: spin 1s infinite linear;
 }

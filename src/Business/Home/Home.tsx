@@ -9,10 +9,6 @@ export function Home() {
             <Hero/>
             <About/>
             <Reviews/>
-            <div className={styles.home_call_to_action}>
-                <p>Still got questions?</p>
-                <button>++ Contact us today! ++</button>
-            </div>
         </div>
     )
 }
